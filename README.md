@@ -7,6 +7,7 @@ The original Skikai companion designed for desktop use with Warudo 3D model inte
    - Start **Warudo** (WebSocket port `19190`).
    - Start your local **TTS API** (HTTP port `9880`).
    - (Optional) Start `discord_bot.py` for Discord integration.
+   - (Optional) Start `bot.js` in plugins/minecraft for Minecraft integration. Open minecraft server to lan and adjust port in file. 
 2. **Start:** Run `python main.py`.
 3. **Voice:** Speak into your mic or type in the terminal. Use "learning mode" to trigger autonomous code self-optimization.
 
