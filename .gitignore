@@ -1,0 +1,15 @@
+.env
+__pycache__/
+chroma_memory/
+skikai_workspace/
+*.wav
+*.pyc
+temp_mic.wav
+vc_temp_*.wav
+workspace_backup_*
+benchmark_results.txt
+knowledge_graph.json
+self_reflections.txt
+shared_slang.txt
+adam_lore.txt
+affinity.txt

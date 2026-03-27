@@ -1,0 +1,97 @@
+[2026-03-08] Initial fixes + learning mode update + project mode.
+  - plugins/minecraft/bot.js: fixed autoEat ESM import (dynamic import for mineflayer-auto-eat v5 which uses "type":"module"), guarded bot.autoEat usage
+  - main.py: fixed steamroll substantive input (questions, long sentences) now interrupts TTS; filler gets steamrolled. Added project_mode routing for MODE_PROJECT
+  - brain.py: capped dynamic context fields (visual_history 5 entries, env_context 250 chars, lore 500, slang 300, diary 400, context 800) to reduce token count on cached turns �! faster TTFT
+  - testbench.py: added cached-turn TTFT measurement (follow-up call after initial prompts)
+  - learning_mode.py: updated Architect prompt with tonight's priorities (conversation, TTFT, optimization, project mode), added TTFT parsing from benchmark_results, added conversation sanity check, added change-awareness constraints
+  - project_mode.py: new module handles idea bouncing, code review, tutoring, and script generation when in MODE_PROJECT
+
+[2026-03-08] Codebase cleanup: dead code removal and readability pass.
+  - Deleted: constants.py (dead single-line file, nothing imported it), paper_trading.json (leftover artifact)
+  - main.py: removed unused imports (os, json), dead variables (adam_noise_counter, SILENCE_THRESHOLD, affinity cache block)
+  - brain.py: removed unused affinity_score assignment
+  - actions.py: removed unused random import
+  - agent_state.py: removed unused random import
+  - voice.py: removed stale development comment
+  - router.py: fixed out-of-order section numbering (4,1,2,3 -> 1,2,3,4), cleaned comment fluff
+  - Removed redundant load_dotenv() calls from 7 modules (config.py is the single source)
+
+[2026-03-08] Removed work mode and all income-related systems.
+  - Deleted: work_mode.py, economy.py, income_registry.py, paper_trading.py
+  - Cleaned main.py: removed work mode trigger/loop, economy imports, income boredom actions, credit deductions
+  - Cleaned brain.py: removed economy import, budget/credits context injection, deduct_cost call, income router triggers, portfolio tangent references
+  - Cleaned router.py: removed income question (#5), income JSON fields, income dispatch block
+  - Cleaned agent_state.py: state snapshot is goals-only (no budget/income), default goals are companion-only
+  - Cleaned config.py: removed paths.work_log
+  - Cleaned learning_mode.py: removed money/trading/income priorities and constraints from Architect prompt
+  - Updated SKIKAI_DEMO_DOC.md: removed all work mode and income references from demo checklist and usage guide
+  Skikai is now a pure companion. No credits, no investing, no work mode.
+
+[2026-03-08] Conversational personality + TTFT context caps (Architect run).
+  - brain.py: tightened static system prompt for Neuro-sama style (chaotic, interrupt yourself, running gags, fixations, genuine reactions, never robotic; condensed wording to avoid adding tokens). Reduced dynamic context caps for faster cached TTFT: visual_history last 3 entries / 180 chars, env_context 180, lore 400, slang 200, diary 300, context blob 600.
+
+[2026-03-08] Compact dynamic context + tighter memory window (Architect run).
+  - brain.py: compressed dynamic context labels and capped injected state text to shrink the per-turn token tail; reduced graph/memory context blob cap from 600 to 480 and short-term history window from 7 to 5 to keep cached turns lighter.
+  - main.py: aligned sensory short-term memory trimming with the new 5-message window so autonomous game events still show up without bloating prompt history.
+
+[2026-03-08] Memory + graph context tightening (Architect run).
+  - brain.py: capped recalled memory text to 240 chars and limited injected knowledge-graph links to the 3 most recent matches with shorter loop-warning phrasing to keep the per-turn context tail smaller and cached TTFT lower without changing behavior.
+
+[2026-03-09] Prompt-tail trimming + context compaction (Architect run).
+  - brain.py: reduced per-turn injected token tail by compacting labels, omitting empty visual history, tightening caps, shortening graph/loop phrasing, and moving repeated boilerplate rules into the static prompt; added a small throttle to prevent overlapping background lore update threads.
+  - environment.py: compressed environment context format and capped active-window length to keep dynamic injection smaller on cached turns.
+
+[2026-03-09] Cached-turn tail shrink + snappier voice (Architect run).
+  - brain.py: further reduced per-turn injection (omit empty fields, shorter caps, compact mem/kg/screen keys, removed per-turn OOC boilerplate, and replaced long tangent text with a compact tg= trigger handled by static rules) to lower cached TTFT while making the core persona more “alive” and derail-prone without adding dynamic tokens.
+
+[2026-03-09] Tangent personalization + tighter caps (Architect run).
+  - brain.py: made high-instability tg= topics more "Skikai life" flavored and slightly tightened lore/state/memory/graph/screen caps to shrink per-turn dynamic context and cached-turn TTFT without touching caching logic.
+
+[2026-03-09] Emotion-tuned sampling + micro tail shrink (Architect run).
+  - brain.py: tied LLM sampling temperature/penalties to Skikai's emotional state for more Neuro-sama-style chaotic replies while slightly reducing dynamic context caps (visual/env/mood/intent/memory/state/screen/context) to shave cached-turn TTFT without touching caching or architecture.
+
+[2026-03-09] Tangent topic refresh + context cap nudge (Architect run).
+  - brain.py: refreshed high-instability tg= topics to be more first-person and Skikai-life flavored while keeping them shorter, and trimmed the shared memory/graph/screen context blob cap slightly (240→220 chars) to shave a few tokens off the per-turn dynamic tail without touching caching or architecture.
+
+[2026-03-09] Local-bench tail trim (Architect run).
+  - brain.py: reduced dynamic context injection for 'Local' platform calls (benchmarks and sanity checks) by trimming lore and skipping diary/state blobs, shaving cached-turn TTFT without changing voice/Discord behavior or caching logic.
+
+[2026-03-09] Persona nudge + history cap (Architect run).
+  - brain.py: refined static system prompt to lean harder into Neuro-sama-style chaotic fixations and callbacks without increasing prompt length, and capped stored user/assistant messages to ~260 chars to keep cached-turn context lighter while preserving behavior.
+
+[2026-03-09] Local context tightening for benchmarks (Architect run).
+  - brain.py: further reduced dynamic context for 'Local' platform calls by skipping env/vision/intent blobs and tightening max context length (220→160) only for Local to lower cached-turn TTFT in testbench runs without changing live Voice/Discord behavior or touching caching logic.
+
+[2026-03-09] Local-only tail micro-optimizations (Architect run).
+  - brain.py: skipped expensive env/vision/graph context construction and slightly reduced memory/context caps and max_tokens for 'Local' platform calls only, shaving cached-turn TTFT for testbench/bench runs without altering Voice/Discord behavior or touching caching/call architecture.
+
+[2026-03-09] First-person persona + TTFT tail trim (Architect run).
+  - brain.py: strengthened static prompt to forbid third-person self-reference and narrating ("First person only. Never say 'Skikai does X' or narrate..."); made tangent topics first-person (my/I) so she doesn't sound like roleplaying. Tightened dynamic context caps (lore 220→200, slang 90→80, diary 160→140, state 90→80, mem 130→115, screen 130→110, context blob 220→200, env 90→80, history blobs 260→240) to shrink per-turn tail and improve cached-turn TTFT without touching caching.
+
+[2026-03-09] Voice prompt + TTFT caps (Architect run).
+  - brain.py: tightened static prompt for Neuro-sama-style "alive" persona—interrupt yourself mid-thought, never robotic, genuine reactions, sincere moments; condensed rules (running gags, first-person/no narrate) without adding tokens. Reduced dynamic context caps (visual 100→80, env 80→70, lore 200→180, slang 80→72, diary 140→120, state 80→72, mem 115→100/70→65 Local, screen 110→95, context 200→180/140→130 Local, history blobs 240→220) to shrink per-turn tail and improve cached-turn TTFT without touching caching.
+
+[2026-03-09] Persona + tail trim (Architect run).
+  - brain.py: strengthened static prompt line for first-person/react-in-moment ("Real opinions; react in the moment. Never narrate or roleplay") without adding tokens. Reduced per-turn tail: lore 180→170, env 70→65, visual max_chars 80→70, history blobs 220→200, context blob 180→170/130→120 Local, screen 95→85 to improve cached-turn TTFT.
+  - environment.py: capped active-window string at source 80→60 chars so env context stays smaller before brain caps it.
+
+[2026-03-09] Persona sharpen + TTFT tail shrink (Architect run).
+  - brain.py: tightened static prompt for "unpredictable", "never robotic", "sincere moments", "not sarcastic-only" without adding tokens. Reduced dynamic caps (visual 70→60, env 65→58, mood/intent 48→44, lore 170→160/70→65 Local, slang 72→68, diary 120→110, state 72→65, mem 100→95/65→60 Local, screen 85→78, context 170→160/120→110 Local, history blobs 200→190, kg node 80→70, mini_mood 28→26) to shrink per-turn tail and improve cached-turn TTFT without touching caching.
+
+[2026-03-09] Persona anti-narrate + TTFT tail shrink (Architect run).
+  - brain.py: clarified static prompt to forbid narrating the situation or third-person self-reference (same token count). Reduced per-turn caps (visual 60→56, env 58→55, mood/intent 44→42, lore 160→155/65→62 Local, slang 68→65, diary 110→105, state 65→60, mem 95→90/60→58, screen 78→72, context 160→155/110→105 Local, history blobs 190→180, kg node 70→65, mini_mood 26→24) to shrink dynamic tail and improve cached-turn TTFT without touching caching.
+
+[2026-03-09] In-the-moment persona + TTFT tail shrink (Architect run).
+  - brain.py: tightened static prompt ("You're in the convo—react, don't describe") to reinforce first-person in-the-moment replies without adding tokens. Reduced per-turn caps (visual 56→52, env 55→52, mood/intent 42→40, lore 155→150/62→58 Local, slang 65→62, diary 105→100, state 60→56, mem 90→86/58→56 Local, screen 72→68, context 155→150/105→100 Local, history blobs 180→175, kg node 65→60, mini_mood 24→22) to shrink dynamic tail and improve cached-turn TTFT without touching caching.
+
+[2026-03-09] Persona anti-roleplay + TTFT tail shrink (Architect run).
+  - brain.py: sharpened static prompt rule to "No narrating, no third-person self; you're you, not roleplaying" (same token count) to reduce roleplay/narrator feel. Reduced per-turn caps (visual 52→48, env 52→48, mood/intent 40→38, lore 150→145/58→54 Local, slang 62→58, diary 100→95, state 56→52, mem 86→82/56→52 Local, screen 68→64, context 150→145/100→95 Local, history blobs 175→170, kg node 60→55, mini_mood 22→20) to shrink dynamic tail and improve cached-turn TTFT without touching caching.
+
+[2026-03-09] "Just talking" persona + TTFT tail shrink (Architect run).
+  - brain.py: tightened static prompt to "React, don't describe. No narrating or third-person—you're you, just talking" (same token count) to reduce narrator/roleplay feel. Reduced per-turn caps (visual 48→44, env 48→44, mood/intent 38→36, lore 145→140/54→50 Local, slang 58→54, diary 95→90, state 52→48, mem 82→78/52→48 Local, screen 64→60, context 145→140/95→90 Local, history blobs 170→165, kg node 55→50, mini_mood 20→18) to shrink dynamic tail and improve cached-turn TTFT without touching caching.
+
+[2026-03-09] Persona "no stage directions" + TTFT tail shrink (Architect run).
+  - brain.py: sharpened static prompt rule to "First person. React, don't describe. No narrating, no third-person, no stage directions—just talk" (slightly fewer tokens) to reduce roleplay/narrator/stage-direction feel. Reduced per-turn caps (visual 44→40, env 44→40, mood/intent 36→34, lore 140→135/50→48 Local, slang 54→50, diary 90→85, state 48→44, mem 78→74/48→44 Local, screen 60→56, context 140→135/90→85 Local, history blobs 165→160, kg node 50→48, mini_mood 18→16) to shrink dynamic tail and improve cached-turn TTFT without touching caching.
+
+[2026-03-09] "You're you—just talk" persona + TTFT tail shrink (Architect run).
+  - brain.py: tightened static prompt to "You're you—just talk. No narrating, third-person, or stage directions" (fewer tokens) to reinforce alive/first-person voice. Reduced per-turn caps (visual 40→36, env 40→36, mood/intent 34→32, lore 135→130/48→45 Local, slang 50→48, diary 85→80, state 44→40, mem 74→70/44→40 Local, screen 56→52, context 135→130/85→80 Local, history blobs 160→155, kg node 48→45, mini_mood 16→14) to shrink dynamic tail and improve cached-turn TTFT without touching caching.

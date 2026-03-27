@@ -1,0 +1,2442 @@
+{
+  "id": "e74d5fda-9c63-4673-a5fe-8f7c77bc4d55",
+  "enabled": true,
+  "name": "New Blueprint",
+  "order": 0,
+  "group": null,
+  "panningX": -769.1811,
+  "panningY": 2670.70068,
+  "scaling": 0.180639476,
+  "nodes": {
+    "fbc438d2-6bed-4dc3-8dc4-a70e0bdc9ecb": {
+      "id": "fbc438d2-6bed-4dc3-8dc4-a70e0bdc9ecb",
+      "dataInputs": {
+        "A": {
+          "type": "string",
+          "value": "\"excited\""
+        },
+        "B": {
+          "type": "string",
+          "value": "\"point\""
+        },
+        "IgnoreCase": {
+          "type": "bool",
+          "value": "true"
+        },
+        "TrimWhitespaces": {
+          "type": "bool",
+          "value": "true"
+        }
+      },
+      "typeId": "6d1b6dd6-5534-4427-9d58-2952082e1244",
+      "name": "STRING_EQUAL",
+      "x": 657.3049,
+      "y": -474.3606
+    },
+    "6ee15654-3781-47d2-ab69-3b2712a4b007": {
+      "id": "6ee15654-3781-47d2-ab69-3b2712a4b007",
+      "dataInputs": {
+        "Info": {
+          "type": "string",
+          "value": "\"Send a raw string to **ws://localhost:19190** to trigger the exit flow.\""
+        }
+      },
+      "typeId": "f06c9110-3ef0-4cd2-89bd-0dc7b69950c6",
+      "name": "ON_WEBSOCKET_RAW_MESSAGE",
+      "x": -65.9442444,
+      "y": 660.045166
+    },
+    "0335ccec-0d0d-43ea-9599-220a09c80663": {
+      "id": "0335ccec-0d0d-43ea-9599-220a09c80663",
+      "dataInputs": {
+        "A": {
+          "type": "string",
+          "value": "\"excited\""
+        },
+        "B": {
+          "type": "string",
+          "value": "\"nod\""
+        },
+        "IgnoreCase": {
+          "type": "bool",
+          "value": "true"
+        },
+        "TrimWhitespaces": {
+          "type": "bool",
+          "value": "true"
+        }
+      },
+      "typeId": "6d1b6dd6-5534-4427-9d58-2952082e1244",
+      "name": "STRING_EQUAL",
+      "x": 638.510742,
+      "y": -889.733643
+    },
+    "717ad1cc-6e42-4c6c-9a23-27a3ee837fd7": {
+      "id": "717ad1cc-6e42-4c6c-9a23-27a3ee837fd7",
+      "dataInputs": {
+        "Condition": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "1b58a074-3c70-412e-ace4-0f12c3f7f16b",
+      "name": "IF_BRANCH",
+      "x": 989.8523,
+      "y": -911.748962
+    },
+    "6bdb4923-554d-447e-8595-6f3606472e9d": {
+      "id": "6bdb4923-554d-447e-8595-6f3606472e9d",
+      "dataInputs": {
+        "Character": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset",
+          "value": "{\"id\":\"29399e49-1c26-41bb-b40f-294dc0590f68\",\"name\":\"Character 1\"}"
+        },
+        "Animation": {
+          "type": "string",
+          "value": "\"character-animation://resources/Animations/AGIA/02_Layers/AGIA_Layer_nod_twice_01\""
+        },
+        "TransitionTime": {
+          "type": "float",
+          "value": "0.35"
+        },
+        "Weight": {
+          "type": "float",
+          "value": "1.0"
+        },
+        "Speed": {
+          "type": "float",
+          "value": "1.15"
+        },
+        "Masked": {
+          "type": "bool",
+          "value": "false"
+        },
+        "MaskedBodyParts": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset+AnimationMaskedBodyPart[]",
+          "value": "[]"
+        },
+        "Additive": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "3c8f47ba-5430-4061-8506-19812b4d2ec0",
+      "name": "PLAY_CHARACTER_ONE_SHOT_ANIMATION",
+      "x": 1541.49524,
+      "y": -953.9705
+    },
+    "dbf69a9e-6a21-44ea-89c3-601f7b1cdf73": {
+      "id": "dbf69a9e-6a21-44ea-89c3-601f7b1cdf73",
+      "dataInputs": {
+        "Character": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset",
+          "value": "{\"id\":\"29399e49-1c26-41bb-b40f-294dc0590f68\",\"name\":\"Character 1\"}"
+        },
+        "Animation": {
+          "type": "string",
+          "value": "\"character-animation://resources/Animations/AGIA/01_Idles/AGIA_Idle_point_finger_01\""
+        },
+        "TransitionTime": {
+          "type": "float",
+          "value": "0.35"
+        },
+        "Weight": {
+          "type": "float",
+          "value": "1.0"
+        },
+        "Speed": {
+          "type": "float",
+          "value": "1.15"
+        },
+        "Masked": {
+          "type": "bool",
+          "value": "false"
+        },
+        "MaskedBodyParts": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset+AnimationMaskedBodyPart[]",
+          "value": "[]"
+        },
+        "Additive": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "3c8f47ba-5430-4061-8506-19812b4d2ec0",
+      "name": "PLAY_CHARACTER_ONE_SHOT_ANIMATION",
+      "x": 1837.13159,
+      "y": -894.886536
+    },
+    "ca3d9307-7109-44e4-b313-02df245ef957": {
+      "id": "ca3d9307-7109-44e4-b313-02df245ef957",
+      "dataInputs": {
+        "Condition": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "1b58a074-3c70-412e-ace4-0f12c3f7f16b",
+      "name": "IF_BRANCH",
+      "x": 1003.68842,
+      "y": -462.636169
+    },
+    "c864ea66-c00c-463e-91af-5f03384b2a82": {
+      "id": "c864ea66-c00c-463e-91af-5f03384b2a82",
+      "dataInputs": {
+        "A": {
+          "type": "string",
+          "value": "\"excited\""
+        },
+        "B": {
+          "type": "string",
+          "value": "\"laugh\""
+        },
+        "IgnoreCase": {
+          "type": "bool",
+          "value": "true"
+        },
+        "TrimWhitespaces": {
+          "type": "bool",
+          "value": "true"
+        }
+      },
+      "typeId": "6d1b6dd6-5534-4427-9d58-2952082e1244",
+      "name": "STRING_EQUAL",
+      "x": 697.9877,
+      "y": -62.2723923
+    },
+    "ec5f8c39-7eb7-4eb0-9486-dd828a5c8806": {
+      "id": "ec5f8c39-7eb7-4eb0-9486-dd828a5c8806",
+      "dataInputs": {
+        "Condition": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "1b58a074-3c70-412e-ace4-0f12c3f7f16b",
+      "name": "IF_BRANCH",
+      "x": 1044.37134,
+      "y": -50.547924
+    },
+    "0c0aa6d4-4257-4a6e-9903-e47106ea86cf": {
+      "id": "0c0aa6d4-4257-4a6e-9903-e47106ea86cf",
+      "dataInputs": {
+        "Character": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset",
+          "value": "{\"id\":\"29399e49-1c26-41bb-b40f-294dc0590f68\",\"name\":\"Character 1\"}"
+        },
+        "Animation": {
+          "type": "string",
+          "value": "\"character-animation://resources/Animations/AGIA/01_Idles/AGIA_Idle_laugh_01\""
+        },
+        "TransitionTime": {
+          "type": "float",
+          "value": "0.35"
+        },
+        "Weight": {
+          "type": "float",
+          "value": "1.0"
+        },
+        "Speed": {
+          "type": "float",
+          "value": "1.15"
+        },
+        "Masked": {
+          "type": "bool",
+          "value": "false"
+        },
+        "MaskedBodyParts": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset+AnimationMaskedBodyPart[]",
+          "value": "[]"
+        },
+        "Additive": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "3c8f47ba-5430-4061-8506-19812b4d2ec0",
+      "name": "PLAY_CHARACTER_ONE_SHOT_ANIMATION",
+      "x": 2129.33618,
+      "y": -877.427368
+    },
+    "cef44dae-8000-488e-9db4-fa693603fc6b": {
+      "id": "cef44dae-8000-488e-9db4-fa693603fc6b",
+      "dataInputs": {
+        "A": {
+          "type": "string",
+          "value": "\"excited\""
+        },
+        "B": {
+          "type": "string",
+          "value": "\"angry\""
+        },
+        "IgnoreCase": {
+          "type": "bool",
+          "value": "true"
+        },
+        "TrimWhitespaces": {
+          "type": "bool",
+          "value": "true"
+        }
+      },
+      "typeId": "6d1b6dd6-5534-4427-9d58-2952082e1244",
+      "name": "STRING_EQUAL",
+      "x": 702.5676,
+      "y": 404.501221
+    },
+    "de8d08a0-5464-4f41-9005-7912652ec279": {
+      "id": "de8d08a0-5464-4f41-9005-7912652ec279",
+      "dataInputs": {
+        "Condition": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "1b58a074-3c70-412e-ace4-0f12c3f7f16b",
+      "name": "IF_BRANCH",
+      "x": 1048.95117,
+      "y": 416.2257
+    },
+    "e0222123-48bd-46ac-b673-4abf1d059fdf": {
+      "id": "e0222123-48bd-46ac-b673-4abf1d059fdf",
+      "dataInputs": {
+        "Character": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset",
+          "value": "{\"id\":\"29399e49-1c26-41bb-b40f-294dc0590f68\",\"name\":\"Character 1\"}"
+        },
+        "Animation": {
+          "type": "string",
+          "value": "\"character-animation://resources/Animations/AGIA/01_Idles/AGIA_Idle_angry_01_hands_on_waist\""
+        },
+        "TransitionTime": {
+          "type": "float",
+          "value": "0.35"
+        },
+        "Weight": {
+          "type": "float",
+          "value": "1.0"
+        },
+        "Speed": {
+          "type": "float",
+          "value": "1.15"
+        },
+        "Masked": {
+          "type": "bool",
+          "value": "false"
+        },
+        "MaskedBodyParts": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset+AnimationMaskedBodyPart[]",
+          "value": "[]"
+        },
+        "Additive": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "3c8f47ba-5430-4061-8506-19812b4d2ec0",
+      "name": "PLAY_CHARACTER_ONE_SHOT_ANIMATION",
+      "x": 2430.97217,
+      "y": -876.8365
+    },
+    "3782ef51-1c42-4f7c-bd3c-49bc2a0d1603": {
+      "id": "3782ef51-1c42-4f7c-bd3c-49bc2a0d1603",
+      "dataInputs": {
+        "A": {
+          "type": "string",
+          "value": "\"excited\""
+        },
+        "B": {
+          "type": "string",
+          "value": "\"shake_head\""
+        },
+        "IgnoreCase": {
+          "type": "bool",
+          "value": "true"
+        },
+        "TrimWhitespaces": {
+          "type": "bool",
+          "value": "true"
+        }
+      },
+      "typeId": "6d1b6dd6-5534-4427-9d58-2952082e1244",
+      "name": "STRING_EQUAL",
+      "x": 702.5683,
+      "y": 844.6593
+    },
+    "ff9e5136-fd5f-4966-af34-30ef475ddb83": {
+      "id": "ff9e5136-fd5f-4966-af34-30ef475ddb83",
+      "dataInputs": {
+        "Condition": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "1b58a074-3c70-412e-ace4-0f12c3f7f16b",
+      "name": "IF_BRANCH",
+      "x": 1053.90979,
+      "y": 822.644
+    },
+    "ec9a50f6-312f-4d45-9773-5a1b972b2c5d": {
+      "id": "ec9a50f6-312f-4d45-9773-5a1b972b2c5d",
+      "dataInputs": {
+        "Character": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset",
+          "value": "{\"id\":\"29399e49-1c26-41bb-b40f-294dc0590f68\",\"name\":\"Character 1\"}"
+        },
+        "Animation": {
+          "type": "string",
+          "value": "\"character-animation://resources/Animations/AGIA/02_Layers/AGIA_Layer_shake_head_01\""
+        },
+        "TransitionTime": {
+          "type": "float",
+          "value": "0.35"
+        },
+        "Weight": {
+          "type": "float",
+          "value": "1.0"
+        },
+        "Speed": {
+          "type": "float",
+          "value": "1.15"
+        },
+        "Masked": {
+          "type": "bool",
+          "value": "false"
+        },
+        "MaskedBodyParts": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset+AnimationMaskedBodyPart[]",
+          "value": "[]"
+        },
+        "Additive": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "3c8f47ba-5430-4061-8506-19812b4d2ec0",
+      "name": "PLAY_CHARACTER_ONE_SHOT_ANIMATION",
+      "x": 1605.55273,
+      "y": 780.4224
+    },
+    "7ad8f277-5755-45b1-b4cb-d121e8218769": {
+      "id": "7ad8f277-5755-45b1-b4cb-d121e8218769",
+      "dataInputs": {
+        "A": {
+          "type": "string",
+          "value": "\"excited\""
+        },
+        "B": {
+          "type": "string",
+          "value": "\"excited\""
+        },
+        "IgnoreCase": {
+          "type": "bool",
+          "value": "true"
+        },
+        "TrimWhitespaces": {
+          "type": "bool",
+          "value": "true"
+        }
+      },
+      "typeId": "6d1b6dd6-5534-4427-9d58-2952082e1244",
+      "name": "STRING_EQUAL",
+      "x": 721.362244,
+      "y": 1260.03235
+    },
+    "868dd2fa-6384-47b0-a4b2-fe0144af9b27": {
+      "id": "868dd2fa-6384-47b0-a4b2-fe0144af9b27",
+      "dataInputs": {
+        "Character": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset",
+          "value": "{\"id\":\"29399e49-1c26-41bb-b40f-294dc0590f68\",\"name\":\"Character 1\"}"
+        },
+        "Animation": {
+          "type": "string",
+          "value": "\"character-animation://resources/Animations/AGIA/03_Others/AGIA_Other_enegetic_02\""
+        },
+        "TransitionTime": {
+          "type": "float",
+          "value": "0.35"
+        },
+        "Weight": {
+          "type": "float",
+          "value": "1.0"
+        },
+        "Speed": {
+          "type": "float",
+          "value": "1.15"
+        },
+        "Masked": {
+          "type": "bool",
+          "value": "false"
+        },
+        "MaskedBodyParts": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset+AnimationMaskedBodyPart[]",
+          "value": "[]"
+        },
+        "Additive": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "3c8f47ba-5430-4061-8506-19812b4d2ec0",
+      "name": "PLAY_CHARACTER_ONE_SHOT_ANIMATION",
+      "x": 1901.18921,
+      "y": 839.506348
+    },
+    "7e977dc1-c0cd-4b13-ad5c-06c90cd45279": {
+      "id": "7e977dc1-c0cd-4b13-ad5c-06c90cd45279",
+      "dataInputs": {
+        "Condition": {
+          "type": "bool",
+          "value": "true"
+        }
+      },
+      "typeId": "1b58a074-3c70-412e-ace4-0f12c3f7f16b",
+      "name": "IF_BRANCH",
+      "x": 1067.74585,
+      "y": 1271.75671
+    },
+    "a76e48b7-6611-49ad-8574-993d26796d73": {
+      "id": "a76e48b7-6611-49ad-8574-993d26796d73",
+      "dataInputs": {
+        "A": {
+          "type": "string",
+          "value": "\"think\""
+        },
+        "B": {
+          "type": "string",
+          "value": "\"pose\""
+        },
+        "IgnoreCase": {
+          "type": "bool",
+          "value": "true"
+        },
+        "TrimWhitespaces": {
+          "type": "bool",
+          "value": "true"
+        }
+      },
+      "typeId": "6d1b6dd6-5534-4427-9d58-2952082e1244",
+      "name": "STRING_EQUAL",
+      "x": 762.0451,
+      "y": 1672.12048
+    },
+    "765c8850-7117-4938-b04c-374cde4210bb": {
+      "id": "765c8850-7117-4938-b04c-374cde4210bb",
+      "dataInputs": {
+        "Condition": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "1b58a074-3c70-412e-ace4-0f12c3f7f16b",
+      "name": "IF_BRANCH",
+      "x": 1108.42883,
+      "y": 1683.845
+    },
+    "62544e90-b2b9-42cf-bc33-0354ada664a4": {
+      "id": "62544e90-b2b9-42cf-bc33-0354ada664a4",
+      "dataInputs": {
+        "Character": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset",
+          "value": "{\"id\":\"29399e49-1c26-41bb-b40f-294dc0590f68\",\"name\":\"Character 1\"}"
+        },
+        "Animation": {
+          "type": "string",
+          "value": "\"character-animation://resources/Animations/AGIA/01_Idles/AGIA_Idle_sexy_02_pose\""
+        },
+        "TransitionTime": {
+          "type": "float",
+          "value": "0.35"
+        },
+        "Weight": {
+          "type": "float",
+          "value": "1.0"
+        },
+        "Speed": {
+          "type": "float",
+          "value": "1.15"
+        },
+        "Masked": {
+          "type": "bool",
+          "value": "false"
+        },
+        "MaskedBodyParts": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset+AnimationMaskedBodyPart[]",
+          "value": "[]"
+        },
+        "Additive": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "3c8f47ba-5430-4061-8506-19812b4d2ec0",
+      "name": "PLAY_CHARACTER_ONE_SHOT_ANIMATION",
+      "x": 2193.3938,
+      "y": 856.9656
+    },
+    "32bbef3c-508a-4815-b519-9f5c766662b8": {
+      "id": "32bbef3c-508a-4815-b519-9f5c766662b8",
+      "dataInputs": {
+        "A": {
+          "type": "string",
+          "value": "\"think\""
+        },
+        "B": {
+          "type": "string",
+          "value": "\"lean_forward\""
+        },
+        "IgnoreCase": {
+          "type": "bool",
+          "value": "true"
+        },
+        "TrimWhitespaces": {
+          "type": "bool",
+          "value": "true"
+        }
+      },
+      "typeId": "6d1b6dd6-5534-4427-9d58-2952082e1244",
+      "name": "STRING_EQUAL",
+      "x": 766.6252,
+      "y": 2138.89429
+    },
+    "57df2183-f186-46a6-bd8d-3c84383a6b94": {
+      "id": "57df2183-f186-46a6-bd8d-3c84383a6b94",
+      "dataInputs": {
+        "Condition": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "1b58a074-3c70-412e-ace4-0f12c3f7f16b",
+      "name": "IF_BRANCH",
+      "x": 1113.00879,
+      "y": 2150.61865
+    },
+    "9a5d31e9-eb58-450d-8f83-3d937d201216": {
+      "id": "9a5d31e9-eb58-450d-8f83-3d937d201216",
+      "dataInputs": {
+        "Character": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset",
+          "value": "{\"id\":\"29399e49-1c26-41bb-b40f-294dc0590f68\",\"name\":\"Character 1\"}"
+        },
+        "Animation": {
+          "type": "string",
+          "value": "\"character-animation://resources/Animations/AGIA/01_Idles/AGIA_Idle_sexy_03_lean_forward\""
+        },
+        "TransitionTime": {
+          "type": "float",
+          "value": "0.35"
+        },
+        "Weight": {
+          "type": "float",
+          "value": "1.0"
+        },
+        "Speed": {
+          "type": "float",
+          "value": "1.15"
+        },
+        "Masked": {
+          "type": "bool",
+          "value": "false"
+        },
+        "MaskedBodyParts": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset+AnimationMaskedBodyPart[]",
+          "value": "[]"
+        },
+        "Additive": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "3c8f47ba-5430-4061-8506-19812b4d2ec0",
+      "name": "PLAY_CHARACTER_ONE_SHOT_ANIMATION",
+      "x": 2495.02979,
+      "y": 857.556458
+    },
+    "4c5969ab-9d47-4ce4-bd44-e9af2a0a597a": {
+      "id": "4c5969ab-9d47-4ce4-bd44-e9af2a0a597a",
+      "dataInputs": {
+        "A": {
+          "type": "string",
+          "value": "\"think\""
+        },
+        "B": {
+          "type": "string",
+          "value": "\"think\""
+        },
+        "IgnoreCase": {
+          "type": "bool",
+          "value": "true"
+        },
+        "TrimWhitespaces": {
+          "type": "bool",
+          "value": "true"
+        }
+      },
+      "typeId": "6d1b6dd6-5534-4427-9d58-2952082e1244",
+      "name": "STRING_EQUAL",
+      "x": 782.6403,
+      "y": 2566.97339
+    },
+    "65f4e59b-ce22-4501-81dd-cb6516d35cdc": {
+      "id": "65f4e59b-ce22-4501-81dd-cb6516d35cdc",
+      "dataInputs": {
+        "Condition": {
+          "type": "bool",
+          "value": "true"
+        }
+      },
+      "typeId": "1b58a074-3c70-412e-ace4-0f12c3f7f16b",
+      "name": "IF_BRANCH",
+      "x": 1129.024,
+      "y": 2578.69775
+    },
+    "bdf49d44-8dc5-4f2c-ba02-4cb3d1969c9b": {
+      "id": "bdf49d44-8dc5-4f2c-ba02-4cb3d1969c9b",
+      "dataInputs": {
+        "Character": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset",
+          "value": "{\"id\":\"29399e49-1c26-41bb-b40f-294dc0590f68\",\"name\":\"Character 1\"}"
+        },
+        "Animation": {
+          "type": "string",
+          "value": "\"character-animation://resources/Animations/AGIA/01_Idles/AGIA_Idle_think_01\""
+        },
+        "TransitionTime": {
+          "type": "float",
+          "value": "0.35"
+        },
+        "Weight": {
+          "type": "float",
+          "value": "1.0"
+        },
+        "Speed": {
+          "type": "float",
+          "value": "1.15"
+        },
+        "Masked": {
+          "type": "bool",
+          "value": "false"
+        },
+        "MaskedBodyParts": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset+AnimationMaskedBodyPart[]",
+          "value": "[]"
+        },
+        "Additive": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "3c8f47ba-5430-4061-8506-19812b4d2ec0",
+      "name": "PLAY_CHARACTER_ONE_SHOT_ANIMATION",
+      "x": 2781.234,
+      "y": 869.0083
+    },
+    "56b25323-73ae-49b1-a017-a9e6d25e2049": {
+      "id": "56b25323-73ae-49b1-a017-a9e6d25e2049",
+      "dataInputs": {
+        "Character": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset",
+          "value": "{\"id\":\"29399e49-1c26-41bb-b40f-294dc0590f68\",\"name\":\"Character 1\"}"
+        },
+        "BlendShapes": {
+          "type": "System.Collections.Generic.Dictionary<string, float>",
+          "value": null
+        },
+        "ApplyToAllSkinnedMeshes": {
+          "type": "bool",
+          "value": "true"
+        },
+        "TargetSkinnedMesh": {
+          "type": "string",
+          "value": "\"Body\""
+        },
+        "UseVRMBlendShapeProxy": {
+          "type": "bool",
+          "value": "false"
+        },
+        "AdditiveVRMBlendShapeClips": {
+          "type": "string[]",
+          "value": "[]"
+        },
+        "ClampAllBlendShapes": {
+          "type": "bool",
+          "value": "true"
+        },
+        "ClampedBlendShapes": {
+          "type": "string[]",
+          "value": "[]"
+        },
+        "UnclampedBlendShapes": {
+          "type": "string[]",
+          "value": "[]"
+        }
+      },
+      "typeId": "979ec114-e27c-4b5b-8170-f66256deee45",
+      "name": "OVERRIDE_CHARACTER_BLENDSHAPES",
+      "x": 1410.17908,
+      "y": -2332.00513
+    },
+    "0836914d-5130-4d1b-8de1-ed83bdb2c3cb": {
+      "id": "0836914d-5130-4d1b-8de1-ed83bdb2c3cb",
+      "dataInputs": {
+        "BlendShapes": {
+          "type": "System.Collections.Generic.Dictionary<string, float>",
+          "value": null
+        },
+        "Enabled": {
+          "type": "bool",
+          "value": "true"
+        },
+        "Weight": {
+          "type": "float",
+          "value": "1.0"
+        },
+        "Microphone": {
+          "type": "string",
+          "value": "\"{0.0.1.00000000}.{3c4943aa-0849-4c74-a267-a22f1a6330bb}\""
+        },
+        "Channel": {
+          "type": "Warudo.Plugins.ProceduralAnimations.Nodes.GenerateLipSyncAnimationNode+ChannelType",
+          "value": "{\"label\":\"Stereo\",\"value\":0,\"description\":null,\"icon\":null}"
+        },
+        "VolumeThreshold": {
+          "type": "float",
+          "value": "15.0"
+        },
+        "Profile": {
+          "type": "string",
+          "value": "\"lip-sync-profile://data/LipSyncProfiles/Default.json\""
+        },
+        "Phonemes": {
+          "type": "Warudo.Plugins.ProceduralAnimations.Nodes.GenerateLipSyncAnimationNode+PhonemeData[]",
+          "value": "[{\"id\":\"24bf6671-79a7-4aab-ad6f-b5cd7795cf04\",\"dataInputs\":{\"Phoneme\":{\"type\":\"string\",\"value\":\"\\\"A\\\"\"},\"BlendShape\":{\"type\":\"string\",\"value\":null},\"MaxWeight\":{\"type\":\"float\",\"value\":\"1.0\"}}},{\"id\":\"3d21bdc2-c61e-48f2-a900-78972631ebc2\",\"dataInputs\":{\"Phoneme\":{\"type\":\"string\",\"value\":\"\\\"I\\\"\"},\"BlendShape\":{\"type\":\"string\",\"value\":null},\"MaxWeight\":{\"type\":\"float\",\"value\":\"1.0\"}}},{\"id\":\"7fef2070-7f00-4e63-96dd-3b5289f82d40\",\"dataInputs\":{\"Phoneme\":{\"type\":\"string\",\"value\":\"\\\"U\\\"\"},\"BlendShape\":{\"type\":\"string\",\"value\":null},\"MaxWeight\":{\"type\":\"float\",\"value\":\"1.0\"}}},{\"id\":\"b1a1e0f2-db72-4177-9142-834b7cb7982c\",\"dataInputs\":{\"Phoneme\":{\"type\":\"string\",\"value\":\"\\\"E\\\"\"},\"BlendShape\":{\"type\":\"string\",\"value\":null},\"MaxWeight\":{\"type\":\"float\",\"value\":\"1.0\"}}},{\"id\":\"ab666a3b-01e9-41cf-8197-09d442c39b76\",\"dataInputs\":{\"Phoneme\":{\"type\":\"string\",\"value\":\"\\\"O\\\"\"},\"BlendShape\":{\"type\":\"string\",\"value\":null},\"MaxWeight\":{\"type\":\"float\",\"value\":\"1.0\"}}}]"
+        },
+        "SmoothTime": {
+          "type": "float",
+          "value": "0.05"
+        },
+        "RemoveInputMouthBlendShapes": {
+          "type": "bool",
+          "value": "true"
+        },
+        "Binarize": {
+          "type": "bool",
+          "value": "false"
+        },
+        "PreviewText": {
+          "type": "string",
+          "value": "\"Current Volume: 0%\\n\\nA: 0%\\n\\nI: 0%\\n\\nU: 0%\\n\\nE: 0%\\n\\nO: 0%\\n\\n\""
+        }
+      },
+      "typeId": "6659230d-fadb-494f-983e-c23364d51abc",
+      "name": "GENERATE_LIP_SYNC_BLENDSHAPES",
+      "x": 707.645569,
+      "y": -2663.44751
+    },
+    "aa4f6271-55aa-4d8e-8b1c-a59098404d17": {
+      "id": "aa4f6271-55aa-4d8e-8b1c-a59098404d17",
+      "dataInputs": {
+        "AudioDevice": {
+          "type": "string",
+          "value": "\"{0.0.1.00000000}.{3c4943aa-0849-4c74-a267-a22f1a6330bb}\""
+        },
+        "Filter": {
+          "type": "Warudo.Plugins.Audio.Nodes.GetAudioDeviceInputNode+FilterType",
+          "value": "{\"label\":\"Bypass\",\"value\":0,\"description\":null,\"icon\":null}"
+        },
+        "Channel": {
+          "type": "Warudo.Plugins.Audio.Nodes.GetAudioDeviceInputNode+ChannelType",
+          "value": "{\"label\":\"Stereo\",\"value\":0,\"description\":null,\"icon\":null}"
+        },
+        "AutoGain": {
+          "type": "bool",
+          "value": "true"
+        },
+        "Gain": {
+          "type": "float",
+          "value": "6.0"
+        },
+        "DynamicRange": {
+          "type": "float",
+          "value": "12.0"
+        }
+      },
+      "typeId": "b58269e2-aa91-41b2-a9c1-f7dc63371490",
+      "name": "GET_AUDIO_DEVICE_INPUT",
+      "x": 2424.26416,
+      "y": -1576.93274
+    },
+    "50f951e0-8861-4de3-a3df-745473e0e148": {
+      "id": "50f951e0-8861-4de3-a3df-745473e0e148",
+      "dataInputs": {
+        "A": {
+          "type": "float",
+          "value": "1.0"
+        },
+        "B": {
+          "type": "float",
+          "value": "1.0"
+        }
+      },
+      "typeId": "108abaf0-189c-4a55-a002-5d568ae4bf6f",
+      "name": "MULTIPLY_FLOAT",
+      "x": 2999.78076,
+      "y": -1555.984
+    },
+    "e7b12eae-368b-4647-89df-c5e7c3eaa418": {
+      "id": "e7b12eae-368b-4647-89df-c5e7c3eaa418",
+      "dataInputs": {},
+      "typeId": "e4140b42-efde-491a-ad88-21038f0289e2",
+      "name": "ON_UPDATE",
+      "x": 4069.63525,
+      "y": -1879.38806
+    },
+    "f0918ead-3b5e-42cf-90d5-cd442b26d5ad": {
+      "id": "f0918ead-3b5e-42cf-90d5-cd442b26d5ad",
+      "dataInputs": {},
+      "typeId": "ec6d827d-4f5c-47ca-8bff-b2722b893eca",
+      "name": "DEFAULT_CHARACTER_BONE_ROTATIONS",
+      "x": 3713.79565,
+      "y": -1741.32507
+    },
+    "c3223d78-b80f-4001-9e6f-d3618e77fc75": {
+      "id": "c3223d78-b80f-4001-9e6f-d3618e77fc75",
+      "dataInputs": {
+        "Rotations": {
+          "type": "UnityEngine.Quaternion[]",
+          "value": "[{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0}]"
+        },
+        "Bones": {
+          "type": "UnityEngine.HumanBodyBones[]",
+          "value": "[{\"label\":\"Spine\",\"value\":7,\"description\":null,\"icon\":null}]"
+        },
+        "OffsetEulerAngle": {
+          "type": "UnityEngine.Vector3",
+          "value": "{\"x\":1.0,\"y\":3.33333373,\"z\":1.0}"
+        }
+      },
+      "typeId": "72905b4e-4efa-41b3-a014-7468b77515bb",
+      "name": "OFFSET_CHARACTER_BONE_ROTATIONS",
+      "x": 4058.94946,
+      "y": -1589.42615
+    },
+    "769763b4-fc8d-4e33-986f-3858cd3d54f7": {
+      "id": "769763b4-fc8d-4e33-986f-3858cd3d54f7",
+      "dataInputs": {},
+      "typeId": "e4140b42-efde-491a-ad88-21038f0289e2",
+      "name": "ON_UPDATE",
+      "x": 1021.23462,
+      "y": -2662.69653
+    },
+    "07dbe4b7-d139-455d-a856-34c77fd2fe77": {
+      "id": "07dbe4b7-d139-455d-a856-34c77fd2fe77",
+      "dataInputs": {
+        "Character": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset",
+          "value": "{\"id\":\"29399e49-1c26-41bb-b40f-294dc0590f68\",\"name\":\"Character 1\"}"
+        },
+        "BoneRotationOffsets": {
+          "type": "UnityEngine.Quaternion[]",
+          "value": "[{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.00897631049,\"y\":0.0290063862,\"z\":0.008468712,\"w\":0.999502957},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":-0.008468712,\"y\":-0.0291586276,\"z\":-0.00897631049,\"w\":0.999498546},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0}]"
+        },
+        "Immediate": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "ba9f4c5c-147f-4f40-85b8-b60757e3bbaa",
+      "name": "OVERRIDE_CHARACTER_BONE_ROTATION_OFFSETS",
+      "x": 4367.651,
+      "y": -1945.22144
+    },
+    "31be7245-4a63-4aa8-95b8-e232072ca418": {
+      "id": "31be7245-4a63-4aa8-95b8-e232072ca418",
+      "dataInputs": {
+        "X": {
+          "type": "float",
+          "value": "1.5"
+        },
+        "Y": {
+          "type": "float",
+          "value": "5.0"
+        },
+        "Z": {
+          "type": "float",
+          "value": "1.5"
+        }
+      },
+      "typeId": "fafc477f-cd4a-44da-8b9d-27f2e66fc255",
+      "name": "VECTOR3",
+      "x": 3718.39453,
+      "y": -1516.34326
+    },
+    "bd4e1550-28b7-44a7-b5a9-c382c41d0e2b": {
+      "id": "bd4e1550-28b7-44a7-b5a9-c382c41d0e2b",
+      "dataInputs": {
+        "A": {
+          "type": "float",
+          "value": "1.0"
+        },
+        "B": {
+          "type": "float",
+          "value": "1.0"
+        }
+      },
+      "typeId": "108abaf0-189c-4a55-a002-5d568ae4bf6f",
+      "name": "MULTIPLY_FLOAT",
+      "x": 3023.21875,
+      "y": -921.1426
+    },
+    "18c62249-5943-4345-bc37-a1fa86d43b7d": {
+      "id": "18c62249-5943-4345-bc37-a1fa86d43b7d",
+      "dataInputs": {
+        "A": {
+          "type": "float",
+          "value": "1.0"
+        },
+        "B": {
+          "type": "float",
+          "value": "-1.0"
+        }
+      },
+      "typeId": "108abaf0-189c-4a55-a002-5d568ae4bf6f",
+      "name": "MULTIPLY_FLOAT",
+      "x": 3387.61328,
+      "y": -1503.434
+    },
+    "61118433-0e7a-4bc2-b09c-277d2a6dafd8": {
+      "id": "61118433-0e7a-4bc2-b09c-277d2a6dafd8",
+      "dataInputs": {
+        "Rotations": {
+          "type": "UnityEngine.Quaternion[]",
+          "value": "[{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.00897631049,\"y\":0.0290063862,\"z\":0.008468712,\"w\":0.999502957},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0}]"
+        },
+        "Bones": {
+          "type": "UnityEngine.HumanBodyBones[]",
+          "value": "[{\"label\":\"Head\",\"value\":10,\"description\":null,\"icon\":null}]"
+        },
+        "OffsetEulerAngle": {
+          "type": "UnityEngine.Vector3",
+          "value": "{\"x\":-1.0,\"y\":-3.33333373,\"z\":-1.0}"
+        }
+      },
+      "typeId": "72905b4e-4efa-41b3-a014-7468b77515bb",
+      "name": "OFFSET_CHARACTER_BONE_ROTATIONS",
+      "x": 4378.65625,
+      "y": -1362.58472
+    },
+    "26d14e35-6cd8-4f02-871a-72a0f06b72b5": {
+      "id": "26d14e35-6cd8-4f02-871a-72a0f06b72b5",
+      "dataInputs": {
+        "X": {
+          "type": "float",
+          "value": "-1.5"
+        },
+        "Y": {
+          "type": "float",
+          "value": "-5.0"
+        },
+        "Z": {
+          "type": "float",
+          "value": "-1.5"
+        }
+      },
+      "typeId": "fafc477f-cd4a-44da-8b9d-27f2e66fc255",
+      "name": "VECTOR3",
+      "x": 3713.792,
+      "y": -1229.80579
+    },
+    "d621c689-5f5c-488b-be0b-c123fdc1405c": {
+      "id": "d621c689-5f5c-488b-be0b-c123fdc1405c",
+      "dataInputs": {
+        "A": {
+          "type": "float",
+          "value": "1.0"
+        },
+        "B": {
+          "type": "float",
+          "value": "3.33333373"
+        }
+      },
+      "typeId": "108abaf0-189c-4a55-a002-5d568ae4bf6f",
+      "name": "MULTIPLY_FLOAT",
+      "x": 3085.45776,
+      "y": -1265.36914
+    },
+    "d4c17df5-a0f7-41d7-9aec-3adad4ec9f0e": {
+      "id": "d4c17df5-a0f7-41d7-9aec-3adad4ec9f0e",
+      "dataInputs": {
+        "Float": {
+          "type": "float",
+          "value": "1.0"
+        },
+        "SmoothTime": {
+          "type": "float",
+          "value": "0.45"
+        }
+      },
+      "typeId": "3f036600-cafc-4b31-8884-f09b686a6fc5",
+      "name": "SMOOTH_FLOAT",
+      "x": 2746.754,
+      "y": -1295.4126
+    },
+    "c9282ce1-6441-4d20-a08a-bd40c6fcfd14": {
+      "id": "c9282ce1-6441-4d20-a08a-bd40c6fcfd14",
+      "dataInputs": {
+        "A": {
+          "type": "float",
+          "value": "3.33333373"
+        },
+        "B": {
+          "type": "float",
+          "value": "-1.0"
+        }
+      },
+      "typeId": "108abaf0-189c-4a55-a002-5d568ae4bf6f",
+      "name": "MULTIPLY_FLOAT",
+      "x": 3386.40234,
+      "y": -1224.02161
+    },
+    "ae648123-8ad8-4b67-a390-84d92f7b62cd": {
+      "id": "ae648123-8ad8-4b67-a390-84d92f7b62cd",
+      "dataInputs": {
+        "A": {
+          "type": "float",
+          "value": "1.0"
+        },
+        "B": {
+          "type": "float",
+          "value": "-1.0"
+        }
+      },
+      "typeId": "108abaf0-189c-4a55-a002-5d568ae4bf6f",
+      "name": "MULTIPLY_FLOAT",
+      "x": 3388.832,
+      "y": -950.680054
+    },
+    "42fef955-858a-4f86-a5bb-777f1032655a": {
+      "id": "42fef955-858a-4f86-a5bb-777f1032655a",
+      "dataInputs": {
+        "FirstIndex": {
+          "type": "int",
+          "value": "-1"
+        },
+        "LastIndex": {
+          "type": "int",
+          "value": "0"
+        },
+        "Interval": {
+          "type": "float",
+          "value": "1.0"
+        },
+        "InitialDelay": {
+          "type": "float",
+          "value": "0.0"
+        }
+      },
+      "typeId": "7eed2e97-f875-45e4-b4d9-8ffe043f2abb",
+      "name": "FOR_LOOP",
+      "x": 2184.706,
+      "y": -2205.17114
+    },
+    "1c2057f3-e89a-48e9-964a-dcbffafcf326": {
+      "id": "1c2057f3-e89a-48e9-964a-dcbffafcf326",
+      "dataInputs": {
+        "seconds": {
+          "type": "float",
+          "value": "1.0"
+        }
+      },
+      "typeId": "Liyin.Timer.TimeTimeout",
+      "name": "TIMER_NODE_TIMEOUT",
+      "x": 4951.90527,
+      "y": -2869.06543
+    },
+    "29a9255a-2007-416e-adef-ab3778367ba5": {
+      "id": "29a9255a-2007-416e-adef-ab3778367ba5",
+      "dataInputs": {
+        "A": {
+          "type": "float",
+          "value": "0.0"
+        },
+        "B": {
+          "type": "float",
+          "value": "0.0"
+        }
+      },
+      "typeId": "392d285d-4cfc-44a3-90b7-2c647eac40c0",
+      "name": "SUBTRACT_FLOAT",
+      "x": 4185.19727,
+      "y": -2660.53149
+    },
+    "28d11879-bbef-4cc7-a3a2-ce840e7c87e7": {
+      "id": "28d11879-bbef-4cc7-a3a2-ce840e7c87e7",
+      "dataInputs": {
+        "FirstIndex": {
+          "type": "int",
+          "value": "1"
+        },
+        "LastIndex": {
+          "type": "int",
+          "value": "10"
+        },
+        "Interval": {
+          "type": "float",
+          "value": "0.0"
+        },
+        "InitialDelay": {
+          "type": "float",
+          "value": "0.0"
+        }
+      },
+      "typeId": "7eed2e97-f875-45e4-b4d9-8ffe043f2abb",
+      "name": "FOR_LOOP",
+      "x": 4154.917,
+      "y": -1266.0979
+    },
+    "31ef2df0-2104-4b7a-8f2b-5c2293ab3e99": {
+      "id": "31ef2df0-2104-4b7a-8f2b-5c2293ab3e99",
+      "dataInputs": {
+        "A": {
+          "type": "float",
+          "value": "0.333333373"
+        },
+        "B": {
+          "type": "float",
+          "value": "15.0"
+        }
+      },
+      "typeId": "108abaf0-189c-4a55-a002-5d568ae4bf6f",
+      "name": "MULTIPLY_FLOAT",
+      "x": 3009.139,
+      "y": -1912.14246
+    },
+    "ab597028-ba8b-4034-a0ae-4112acb1484e": {
+      "id": "ab597028-ba8b-4034-a0ae-4112acb1484e",
+      "dataInputs": {
+        "A": {
+          "type": "float",
+          "value": "-0.333273351"
+        },
+        "B": {
+          "type": "float",
+          "value": "20.0"
+        }
+      },
+      "typeId": "108abaf0-189c-4a55-a002-5d568ae4bf6f",
+      "name": "MULTIPLY_FLOAT",
+      "x": 3207.41284,
+      "y": -2345.00366
+    },
+    "69cbde4f-cef1-4177-9e55-c7366ac444ec": {
+      "id": "69cbde4f-cef1-4177-9e55-c7366ac444ec",
+      "dataInputs": {
+        "seconds": {
+          "type": "float",
+          "value": "7.29"
+        }
+      },
+      "typeId": "Liyin.Timer.TimeTimeout",
+      "name": "TIMER_NODE_TIMEOUT",
+      "x": 1923.576,
+      "y": -2102.33252
+    },
+    "d40d11aa-5a2d-4bda-baaa-f6670b26b5c1": {
+      "id": "d40d11aa-5a2d-4bda-baaa-f6670b26b5c1",
+      "dataInputs": {
+        "ValueMin": {
+          "type": "float",
+          "value": "0.0"
+        },
+        "ValueMax": {
+          "type": "float",
+          "value": "1.0"
+        }
+      },
+      "typeId": "4bfdcec6-6386-4e4c-a8e7-b85af716779f",
+      "name": "GENERATE_RANDOM_FLOAT",
+      "x": 4861.55664,
+      "y": -2226.36987
+    },
+    "04119da3-12e1-4604-be91-cd5c6b5fbd33": {
+      "id": "04119da3-12e1-4604-be91-cd5c6b5fbd33",
+      "dataInputs": {
+        "A": {
+          "type": "float",
+          "value": "1.0"
+        },
+        "B": {
+          "type": "float",
+          "value": "0.5"
+        }
+      },
+      "typeId": "392d285d-4cfc-44a3-90b7-2c647eac40c0",
+      "name": "SUBTRACT_FLOAT",
+      "x": 2638.21875,
+      "y": -2440.77173
+    },
+    "1a534d7d-e971-4549-a533-f1944e846ee2": {
+      "id": "1a534d7d-e971-4549-a533-f1944e846ee2",
+      "dataInputs": {
+        "ValueMin": {
+          "type": "int",
+          "value": "-1"
+        },
+        "ValueMax": {
+          "type": "int",
+          "value": "1"
+        }
+      },
+      "typeId": "087d0472-2ac7-4ae5-928b-c34b991259c9",
+      "name": "GENERATE_RANDOM_INTEGER",
+      "x": 2199.82959,
+      "y": -2569.14014
+    },
+    "650a123a-1865-4245-90fc-a5597dd1111b": {
+      "id": "650a123a-1865-4245-90fc-a5597dd1111b",
+      "dataInputs": {
+        "A": {
+          "type": "float",
+          "value": "0.5"
+        },
+        "SourceValueMin": {
+          "type": "float",
+          "value": "0.0"
+        },
+        "SourceValueMax": {
+          "type": "float",
+          "value": "5.0"
+        },
+        "Intensity": {
+          "type": "float",
+          "value": "3.5"
+        },
+        "Arms": {
+          "type": "Warudo.Plugins.Core.Nodes.FloatPendulumPhysicsNode+ArmData[]",
+          "value": "[{\"id\": \"3f290562-c235-4cc2-81f4-9ff73b7f47dc\", \"dataInputs\": {\"Length\": {\"type\": \"float\", \"value\": \"25.0\"}, \"Mass\": {\"type\": \"float\", \"value\": \"1.5\"}, \"Drag\": {\"type\": \"float\", \"value\": \"0.1\"}, \"Spring\": {\"type\": \"float\", \"value\": \"1.8\"}, \"Damping\": {\"type\": \"float\", \"value\": \"0.05\"}, \"Gravity\": {\"type\": \"float\", \"value\": \"0.25\"}}}]"
+        },
+        "Visualize": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "deb13d59-0bee-46a0-be04-30012d5442d8",
+      "name": "FLOAT_PENDULUM_PHYSICS",
+      "x": 2983.17847,
+      "y": -2569.597
+    },
+    "335faa20-23d6-451c-a9d8-908a90019c62": {
+      "id": "335faa20-23d6-451c-a9d8-908a90019c62",
+      "dataInputs": {
+        "A": {
+          "type": "string",
+          "value": "\"shrug\""
+        },
+        "B": {
+          "type": "string",
+          "value": "\"shrug\""
+        },
+        "IgnoreCase": {
+          "type": "bool",
+          "value": "true"
+        },
+        "TrimWhitespaces": {
+          "type": "bool",
+          "value": "true"
+        }
+      },
+      "typeId": "6d1b6dd6-5534-4427-9d58-2952082e1244",
+      "name": "STRING_EQUAL",
+      "x": 750.0,
+      "y": 3000.0
+    },
+    "36cb1684-6e18-4384-9557-19744aa70d32": {
+      "id": "36cb1684-6e18-4384-9557-19744aa70d32",
+      "dataInputs": {
+        "Condition": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "1b58a074-3c70-412e-ace4-0f12c3f7f16b",
+      "name": "IF_BRANCH",
+      "x": 1100.0,
+      "y": 3012.0
+    },
+    "dcabc585-a2d8-41c6-83b7-6db6f0ef712f": {
+      "id": "dcabc585-a2d8-41c6-83b7-6db6f0ef712f",
+      "dataInputs": {
+        "Character": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset",
+          "value": "{\"id\":\"29399e49-1c26-41bb-b40f-294dc0590f68\",\"name\":\"Character 1\"}"
+        },
+        "Animation": {
+          "type": "string",
+          "value": "\"character-animation://resources/Animations/AGIA/02_Layers/AGIA_Layer_shrug_01\""
+        },
+        "TransitionTime": {
+          "type": "float",
+          "value": "0.35"
+        },
+        "Weight": {
+          "type": "float",
+          "value": "1.0"
+        },
+        "Speed": {
+          "type": "float",
+          "value": "1.15"
+        },
+        "Masked": {
+          "type": "bool",
+          "value": "false"
+        },
+        "MaskedBodyParts": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset+AnimationMaskedBodyPart[]",
+          "value": "[]"
+        },
+        "Additive": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "3c8f47ba-5430-4061-8506-19812b4d2ec0",
+      "name": "PLAY_CHARACTER_ONE_SHOT_ANIMATION",
+      "x": 1600.0,
+      "y": 3010.0
+    },
+    "2deeb9ac-7d0b-46ab-8dbb-cdce0ae53265": {
+      "id": "2deeb9ac-7d0b-46ab-8dbb-cdce0ae53265",
+      "dataInputs": {
+        "A": {
+          "type": "string",
+          "value": "\"tilt_head\""
+        },
+        "B": {
+          "type": "string",
+          "value": "\"tilt_head\""
+        },
+        "IgnoreCase": {
+          "type": "bool",
+          "value": "true"
+        },
+        "TrimWhitespaces": {
+          "type": "bool",
+          "value": "true"
+        }
+      },
+      "typeId": "6d1b6dd6-5534-4427-9d58-2952082e1244",
+      "name": "STRING_EQUAL",
+      "x": 750.0,
+      "y": 3450.0
+    },
+    "dcaf2d4b-acd2-4680-bf66-b197048a5bb7": {
+      "id": "dcaf2d4b-acd2-4680-bf66-b197048a5bb7",
+      "dataInputs": {
+        "Condition": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "1b58a074-3c70-412e-ace4-0f12c3f7f16b",
+      "name": "IF_BRANCH",
+      "x": 1100.0,
+      "y": 3462.0
+    },
+    "857fdbc7-9b1d-421d-847b-988a679001a7": {
+      "id": "857fdbc7-9b1d-421d-847b-988a679001a7",
+      "dataInputs": {
+        "Character": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset",
+          "value": "{\"id\":\"29399e49-1c26-41bb-b40f-294dc0590f68\",\"name\":\"Character 1\"}"
+        },
+        "Animation": {
+          "type": "string",
+          "value": "\"character-animation://resources/Animations/AGIA/02_Layers/AGIA_Layer_head_tilt_01\""
+        },
+        "TransitionTime": {
+          "type": "float",
+          "value": "0.35"
+        },
+        "Weight": {
+          "type": "float",
+          "value": "1.0"
+        },
+        "Speed": {
+          "type": "float",
+          "value": "1.15"
+        },
+        "Masked": {
+          "type": "bool",
+          "value": "false"
+        },
+        "MaskedBodyParts": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset+AnimationMaskedBodyPart[]",
+          "value": "[]"
+        },
+        "Additive": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "3c8f47ba-5430-4061-8506-19812b4d2ec0",
+      "name": "PLAY_CHARACTER_ONE_SHOT_ANIMATION",
+      "x": 1600.0,
+      "y": 3460.0
+    },
+    "32432f06-4ceb-4c9e-b6e5-9790d195730f": {
+      "id": "32432f06-4ceb-4c9e-b6e5-9790d195730f",
+      "dataInputs": {
+        "A": {
+          "type": "string",
+          "value": "\"glance_away\""
+        },
+        "B": {
+          "type": "string",
+          "value": "\"glance_away\""
+        },
+        "IgnoreCase": {
+          "type": "bool",
+          "value": "true"
+        },
+        "TrimWhitespaces": {
+          "type": "bool",
+          "value": "true"
+        }
+      },
+      "typeId": "6d1b6dd6-5534-4427-9d58-2952082e1244",
+      "name": "STRING_EQUAL",
+      "x": 750.0,
+      "y": 3900.0
+    },
+    "e623697f-2ae0-4b9c-8c73-e4509dd4d2e0": {
+      "id": "e623697f-2ae0-4b9c-8c73-e4509dd4d2e0",
+      "dataInputs": {
+        "Condition": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "1b58a074-3c70-412e-ace4-0f12c3f7f16b",
+      "name": "IF_BRANCH",
+      "x": 1100.0,
+      "y": 3912.0
+    },
+    "47f325c6-fa79-45b9-942e-5641691c08dd": {
+      "id": "47f325c6-fa79-45b9-942e-5641691c08dd",
+      "dataInputs": {
+        "Character": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset",
+          "value": "{\"id\":\"29399e49-1c26-41bb-b40f-294dc0590f68\",\"name\":\"Character 1\"}"
+        },
+        "Animation": {
+          "type": "string",
+          "value": "\"character-animation://resources/Animations/AGIA/02_Layers/AGIA_Layer_look_away_01\""
+        },
+        "TransitionTime": {
+          "type": "float",
+          "value": "0.35"
+        },
+        "Weight": {
+          "type": "float",
+          "value": "1.0"
+        },
+        "Speed": {
+          "type": "float",
+          "value": "1.15"
+        },
+        "Masked": {
+          "type": "bool",
+          "value": "false"
+        },
+        "MaskedBodyParts": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset+AnimationMaskedBodyPart[]",
+          "value": "[]"
+        },
+        "Additive": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "3c8f47ba-5430-4061-8506-19812b4d2ec0",
+      "name": "PLAY_CHARACTER_ONE_SHOT_ANIMATION",
+      "x": 1600.0,
+      "y": 3910.0
+    },
+    "fe0397f9-f96f-4aee-9e1f-ea4e1d8ee09b": {
+      "id": "fe0397f9-f96f-4aee-9e1f-ea4e1d8ee09b",
+      "dataInputs": {
+        "A": {
+          "type": "string",
+          "value": "\"sigh\""
+        },
+        "B": {
+          "type": "string",
+          "value": "\"sigh\""
+        },
+        "IgnoreCase": {
+          "type": "bool",
+          "value": "true"
+        },
+        "TrimWhitespaces": {
+          "type": "bool",
+          "value": "true"
+        }
+      },
+      "typeId": "6d1b6dd6-5534-4427-9d58-2952082e1244",
+      "name": "STRING_EQUAL",
+      "x": 750.0,
+      "y": 4350.0
+    },
+    "269a5ebf-6011-4c33-b0c7-a48e69e4a98d": {
+      "id": "269a5ebf-6011-4c33-b0c7-a48e69e4a98d",
+      "dataInputs": {
+        "Condition": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "1b58a074-3c70-412e-ace4-0f12c3f7f16b",
+      "name": "IF_BRANCH",
+      "x": 1100.0,
+      "y": 4362.0
+    },
+    "6d97b668-b809-41c1-89ef-6c0047cbf41c": {
+      "id": "6d97b668-b809-41c1-89ef-6c0047cbf41c",
+      "dataInputs": {
+        "Character": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset",
+          "value": "{\"id\":\"29399e49-1c26-41bb-b40f-294dc0590f68\",\"name\":\"Character 1\"}"
+        },
+        "Animation": {
+          "type": "string",
+          "value": "\"character-animation://resources/Animations/AGIA/01_Idles/AGIA_Idle_sigh_01\""
+        },
+        "TransitionTime": {
+          "type": "float",
+          "value": "0.35"
+        },
+        "Weight": {
+          "type": "float",
+          "value": "1.0"
+        },
+        "Speed": {
+          "type": "float",
+          "value": "1.15"
+        },
+        "Masked": {
+          "type": "bool",
+          "value": "false"
+        },
+        "MaskedBodyParts": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset+AnimationMaskedBodyPart[]",
+          "value": "[]"
+        },
+        "Additive": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "3c8f47ba-5430-4061-8506-19812b4d2ec0",
+      "name": "PLAY_CHARACTER_ONE_SHOT_ANIMATION",
+      "x": 1600.0,
+      "y": 4360.0
+    },
+    "bd818332-2b72-4f5e-8e87-1e96865b13ca": {
+      "id": "bd818332-2b72-4f5e-8e87-1e96865b13ca",
+      "dataInputs": {
+        "A": {
+          "type": "string",
+          "value": "\"pout\""
+        },
+        "B": {
+          "type": "string",
+          "value": "\"pout\""
+        },
+        "IgnoreCase": {
+          "type": "bool",
+          "value": "true"
+        },
+        "TrimWhitespaces": {
+          "type": "bool",
+          "value": "true"
+        }
+      },
+      "typeId": "6d1b6dd6-5534-4427-9d58-2952082e1244",
+      "name": "STRING_EQUAL",
+      "x": 750.0,
+      "y": 4800.0
+    },
+    "e826c3c3-0ab2-419c-89c4-9d263f689793": {
+      "id": "e826c3c3-0ab2-419c-89c4-9d263f689793",
+      "dataInputs": {
+        "Condition": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "1b58a074-3c70-412e-ace4-0f12c3f7f16b",
+      "name": "IF_BRANCH",
+      "x": 1100.0,
+      "y": 4812.0
+    },
+    "0ff0ed68-b609-4bd5-a998-0e430bc6d800": {
+      "id": "0ff0ed68-b609-4bd5-a998-0e430bc6d800",
+      "dataInputs": {
+        "Character": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset",
+          "value": "{\"id\":\"29399e49-1c26-41bb-b40f-294dc0590f68\",\"name\":\"Character 1\"}"
+        },
+        "Animation": {
+          "type": "string",
+          "value": "\"character-animation://resources/Animations/AGIA/02_Layers/AGIA_Layer_pout_01\""
+        },
+        "TransitionTime": {
+          "type": "float",
+          "value": "0.35"
+        },
+        "Weight": {
+          "type": "float",
+          "value": "1.0"
+        },
+        "Speed": {
+          "type": "float",
+          "value": "1.15"
+        },
+        "Masked": {
+          "type": "bool",
+          "value": "false"
+        },
+        "MaskedBodyParts": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset+AnimationMaskedBodyPart[]",
+          "value": "[]"
+        },
+        "Additive": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "3c8f47ba-5430-4061-8506-19812b4d2ec0",
+      "name": "PLAY_CHARACTER_ONE_SHOT_ANIMATION",
+      "x": 1600.0,
+      "y": 4810.0
+    },
+    "8e119099-d78d-42ec-bb8a-24fcdbea46ae": {
+      "id": "8e119099-d78d-42ec-bb8a-24fcdbea46ae",
+      "dataInputs": {
+        "A": {
+          "type": "string",
+          "value": "\"smug\""
+        },
+        "B": {
+          "type": "string",
+          "value": "\"smug\""
+        },
+        "IgnoreCase": {
+          "type": "bool",
+          "value": "true"
+        },
+        "TrimWhitespaces": {
+          "type": "bool",
+          "value": "true"
+        }
+      },
+      "typeId": "6d1b6dd6-5534-4427-9d58-2952082e1244",
+      "name": "STRING_EQUAL",
+      "x": 750.0,
+      "y": 5250.0
+    },
+    "1e841098-f9a7-4af3-89ed-f288d3281546": {
+      "id": "1e841098-f9a7-4af3-89ed-f288d3281546",
+      "dataInputs": {
+        "Condition": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "1b58a074-3c70-412e-ace4-0f12c3f7f16b",
+      "name": "IF_BRANCH",
+      "x": 1100.0,
+      "y": 5262.0
+    },
+    "bbbec3de-df01-4ad0-b05c-a4e3a51c5094": {
+      "id": "bbbec3de-df01-4ad0-b05c-a4e3a51c5094",
+      "dataInputs": {
+        "Character": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset",
+          "value": "{\"id\":\"29399e49-1c26-41bb-b40f-294dc0590f68\",\"name\":\"Character 1\"}"
+        },
+        "Animation": {
+          "type": "string",
+          "value": "\"character-animation://resources/Animations/AGIA/01_Idles/AGIA_Idle_smug_01\""
+        },
+        "TransitionTime": {
+          "type": "float",
+          "value": "0.35"
+        },
+        "Weight": {
+          "type": "float",
+          "value": "1.0"
+        },
+        "Speed": {
+          "type": "float",
+          "value": "1.15"
+        },
+        "Masked": {
+          "type": "bool",
+          "value": "false"
+        },
+        "MaskedBodyParts": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset+AnimationMaskedBodyPart[]",
+          "value": "[]"
+        },
+        "Additive": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "3c8f47ba-5430-4061-8506-19812b4d2ec0",
+      "name": "PLAY_CHARACTER_ONE_SHOT_ANIMATION",
+      "x": 1600.0,
+      "y": 5260.0
+    },
+    "25f5b349-237d-4112-9128-b36e5e882d85": {
+      "id": "25f5b349-237d-4112-9128-b36e5e882d85",
+      "dataInputs": {
+        "A": {
+          "type": "string",
+          "value": "\"surprise\""
+        },
+        "B": {
+          "type": "string",
+          "value": "\"surprise\""
+        },
+        "IgnoreCase": {
+          "type": "bool",
+          "value": "true"
+        },
+        "TrimWhitespaces": {
+          "type": "bool",
+          "value": "true"
+        }
+      },
+      "typeId": "6d1b6dd6-5534-4427-9d58-2952082e1244",
+      "name": "STRING_EQUAL",
+      "x": 750.0,
+      "y": 5700.0
+    },
+    "3d80cd4d-084c-4613-8685-92a293d7a4e0": {
+      "id": "3d80cd4d-084c-4613-8685-92a293d7a4e0",
+      "dataInputs": {
+        "Condition": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "1b58a074-3c70-412e-ace4-0f12c3f7f16b",
+      "name": "IF_BRANCH",
+      "x": 1100.0,
+      "y": 5712.0
+    },
+    "cfe8b02a-f02d-4df2-a1c3-cbd416d80b6b": {
+      "id": "cfe8b02a-f02d-4df2-a1c3-cbd416d80b6b",
+      "dataInputs": {
+        "Character": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset",
+          "value": "{\"id\":\"29399e49-1c26-41bb-b40f-294dc0590f68\",\"name\":\"Character 1\"}"
+        },
+        "Animation": {
+          "type": "string",
+          "value": "\"character-animation://resources/Animations/AGIA/03_Others/AGIA_Other_surprised_01\""
+        },
+        "TransitionTime": {
+          "type": "float",
+          "value": "0.35"
+        },
+        "Weight": {
+          "type": "float",
+          "value": "1.0"
+        },
+        "Speed": {
+          "type": "float",
+          "value": "1.15"
+        },
+        "Masked": {
+          "type": "bool",
+          "value": "false"
+        },
+        "MaskedBodyParts": {
+          "type": "Warudo.Plugins.Core.Assets.Character.CharacterAsset+AnimationMaskedBodyPart[]",
+          "value": "[]"
+        },
+        "Additive": {
+          "type": "bool",
+          "value": "false"
+        }
+      },
+      "typeId": "3c8f47ba-5430-4061-8506-19812b4d2ec0",
+      "name": "PLAY_CHARACTER_ONE_SHOT_ANIMATION",
+      "x": 1600.0,
+      "y": 5710.0
+    }
+  },
+  "dataConnections": [
+    {
+      "outputNode": "6ee15654-3781-47d2-ab69-3b2712a4b007",
+      "inputNode": "0335ccec-0d0d-43ea-9599-220a09c80663",
+      "outputPort": "RawMessage",
+      "inputPort": "A"
+    },
+    {
+      "outputNode": "0335ccec-0d0d-43ea-9599-220a09c80663",
+      "inputNode": "717ad1cc-6e42-4c6c-9a23-27a3ee837fd7",
+      "outputPort": "Result",
+      "inputPort": "Condition"
+    },
+    {
+      "outputNode": "6ee15654-3781-47d2-ab69-3b2712a4b007",
+      "inputNode": "fbc438d2-6bed-4dc3-8dc4-a70e0bdc9ecb",
+      "outputPort": "RawMessage",
+      "inputPort": "A"
+    },
+    {
+      "outputNode": "fbc438d2-6bed-4dc3-8dc4-a70e0bdc9ecb",
+      "inputNode": "ca3d9307-7109-44e4-b313-02df245ef957",
+      "outputPort": "Result",
+      "inputPort": "Condition"
+    },
+    {
+      "outputNode": "c864ea66-c00c-463e-91af-5f03384b2a82",
+      "inputNode": "ec5f8c39-7eb7-4eb0-9486-dd828a5c8806",
+      "outputPort": "Result",
+      "inputPort": "Condition"
+    },
+    {
+      "outputNode": "6ee15654-3781-47d2-ab69-3b2712a4b007",
+      "inputNode": "c864ea66-c00c-463e-91af-5f03384b2a82",
+      "outputPort": "RawMessage",
+      "inputPort": "A"
+    },
+    {
+      "outputNode": "cef44dae-8000-488e-9db4-fa693603fc6b",
+      "inputNode": "de8d08a0-5464-4f41-9005-7912652ec279",
+      "outputPort": "Result",
+      "inputPort": "Condition"
+    },
+    {
+      "outputNode": "6ee15654-3781-47d2-ab69-3b2712a4b007",
+      "inputNode": "cef44dae-8000-488e-9db4-fa693603fc6b",
+      "outputPort": "RawMessage",
+      "inputPort": "A"
+    },
+    {
+      "outputNode": "3782ef51-1c42-4f7c-bd3c-49bc2a0d1603",
+      "inputNode": "ff9e5136-fd5f-4966-af34-30ef475ddb83",
+      "outputPort": "Result",
+      "inputPort": "Condition"
+    },
+    {
+      "outputNode": "7ad8f277-5755-45b1-b4cb-d121e8218769",
+      "inputNode": "7e977dc1-c0cd-4b13-ad5c-06c90cd45279",
+      "outputPort": "Result",
+      "inputPort": "Condition"
+    },
+    {
+      "outputNode": "a76e48b7-6611-49ad-8574-993d26796d73",
+      "inputNode": "765c8850-7117-4938-b04c-374cde4210bb",
+      "outputPort": "Result",
+      "inputPort": "Condition"
+    },
+    {
+      "outputNode": "32bbef3c-508a-4815-b519-9f5c766662b8",
+      "inputNode": "57df2183-f186-46a6-bd8d-3c84383a6b94",
+      "outputPort": "Result",
+      "inputPort": "Condition"
+    },
+    {
+      "outputNode": "6ee15654-3781-47d2-ab69-3b2712a4b007",
+      "inputNode": "3782ef51-1c42-4f7c-bd3c-49bc2a0d1603",
+      "outputPort": "RawMessage",
+      "inputPort": "A"
+    },
+    {
+      "outputNode": "6ee15654-3781-47d2-ab69-3b2712a4b007",
+      "inputNode": "7ad8f277-5755-45b1-b4cb-d121e8218769",
+      "outputPort": "RawMessage",
+      "inputPort": "A"
+    },
+    {
+      "outputNode": "6ee15654-3781-47d2-ab69-3b2712a4b007",
+      "inputNode": "a76e48b7-6611-49ad-8574-993d26796d73",
+      "outputPort": "RawMessage",
+      "inputPort": "A"
+    },
+    {
+      "outputNode": "6ee15654-3781-47d2-ab69-3b2712a4b007",
+      "inputNode": "32bbef3c-508a-4815-b519-9f5c766662b8",
+      "outputPort": "RawMessage",
+      "inputPort": "A"
+    },
+    {
+      "outputNode": "4c5969ab-9d47-4ce4-bd44-e9af2a0a597a",
+      "inputNode": "65f4e59b-ce22-4501-81dd-cb6516d35cdc",
+      "outputPort": "Result",
+      "inputPort": "Condition"
+    },
+    {
+      "outputNode": "6ee15654-3781-47d2-ab69-3b2712a4b007",
+      "inputNode": "4c5969ab-9d47-4ce4-bd44-e9af2a0a597a",
+      "outputPort": "RawMessage",
+      "inputPort": "A"
+    },
+    {
+      "outputNode": "0836914d-5130-4d1b-8de1-ed83bdb2c3cb",
+      "inputNode": "56b25323-73ae-49b1-a017-a9e6d25e2049",
+      "outputPort": "OutputBlendShapes",
+      "inputPort": "BlendShapes"
+    },
+    {
+      "outputNode": "d4c17df5-a0f7-41d7-9aec-3adad4ec9f0e",
+      "inputNode": "50f951e0-8861-4de3-a3df-745473e0e148",
+      "outputPort": "SmoothedFloat",
+      "inputPort": "A"
+    },
+    {
+      "outputNode": "50f951e0-8861-4de3-a3df-745473e0e148",
+      "inputNode": "31be7245-4a63-4aa8-95b8-e232072ca418",
+      "outputPort": "Result",
+      "inputPort": "X"
+    },
+    {
+      "outputNode": "d621c689-5f5c-488b-be0b-c123fdc1405c",
+      "inputNode": "31be7245-4a63-4aa8-95b8-e232072ca418",
+      "outputPort": "Result",
+      "inputPort": "Y"
+    },
+    {
+      "outputNode": "bd4e1550-28b7-44a7-b5a9-c382c41d0e2b",
+      "inputNode": "31be7245-4a63-4aa8-95b8-e232072ca418",
+      "outputPort": "Result",
+      "inputPort": "Z"
+    },
+    {
+      "outputNode": "31be7245-4a63-4aa8-95b8-e232072ca418",
+      "inputNode": "c3223d78-b80f-4001-9e6f-d3618e77fc75",
+      "outputPort": "Output",
+      "inputPort": "OffsetEulerAngle"
+    },
+    {
+      "outputNode": "f0918ead-3b5e-42cf-90d5-cd442b26d5ad",
+      "inputNode": "c3223d78-b80f-4001-9e6f-d3618e77fc75",
+      "outputPort": "Output",
+      "inputPort": "Rotations"
+    },
+    {
+      "outputNode": "61118433-0e7a-4bc2-b09c-277d2a6dafd8",
+      "inputNode": "07dbe4b7-d139-455d-a856-34c77fd2fe77",
+      "outputPort": "OutputRotations",
+      "inputPort": "BoneRotationOffsets"
+    },
+    {
+      "outputNode": "aa4f6271-55aa-4d8e-8b1c-a59098404d17",
+      "inputNode": "d4c17df5-a0f7-41d7-9aec-3adad4ec9f0e",
+      "outputPort": "Amplitude",
+      "inputPort": "Float"
+    },
+    {
+      "outputNode": "d4c17df5-a0f7-41d7-9aec-3adad4ec9f0e",
+      "inputNode": "d621c689-5f5c-488b-be0b-c123fdc1405c",
+      "outputPort": "SmoothedFloat",
+      "inputPort": "A"
+    },
+    {
+      "outputNode": "31ef2df0-2104-4b7a-8f2b-5c2293ab3e99",
+      "inputNode": "d621c689-5f5c-488b-be0b-c123fdc1405c",
+      "outputPort": "Result",
+      "inputPort": "B"
+    },
+    {
+      "outputNode": "d4c17df5-a0f7-41d7-9aec-3adad4ec9f0e",
+      "inputNode": "bd4e1550-28b7-44a7-b5a9-c382c41d0e2b",
+      "outputPort": "SmoothedFloat",
+      "inputPort": "A"
+    },
+    {
+      "outputNode": "c3223d78-b80f-4001-9e6f-d3618e77fc75",
+      "inputNode": "61118433-0e7a-4bc2-b09c-277d2a6dafd8",
+      "outputPort": "OutputRotations",
+      "inputPort": "Rotations"
+    },
+    {
+      "outputNode": "26d14e35-6cd8-4f02-871a-72a0f06b72b5",
+      "inputNode": "61118433-0e7a-4bc2-b09c-277d2a6dafd8",
+      "outputPort": "Output",
+      "inputPort": "OffsetEulerAngle"
+    },
+    {
+      "outputNode": "50f951e0-8861-4de3-a3df-745473e0e148",
+      "inputNode": "18c62249-5943-4345-bc37-a1fa86d43b7d",
+      "outputPort": "Result",
+      "inputPort": "A"
+    },
+    {
+      "outputNode": "d621c689-5f5c-488b-be0b-c123fdc1405c",
+      "inputNode": "c9282ce1-6441-4d20-a08a-bd40c6fcfd14",
+      "outputPort": "Result",
+      "inputPort": "A"
+    },
+    {
+      "outputNode": "bd4e1550-28b7-44a7-b5a9-c382c41d0e2b",
+      "inputNode": "ae648123-8ad8-4b67-a390-84d92f7b62cd",
+      "outputPort": "Result",
+      "inputPort": "A"
+    },
+    {
+      "outputNode": "18c62249-5943-4345-bc37-a1fa86d43b7d",
+      "inputNode": "26d14e35-6cd8-4f02-871a-72a0f06b72b5",
+      "outputPort": "Result",
+      "inputPort": "X"
+    },
+    {
+      "outputNode": "c9282ce1-6441-4d20-a08a-bd40c6fcfd14",
+      "inputNode": "26d14e35-6cd8-4f02-871a-72a0f06b72b5",
+      "outputPort": "Result",
+      "inputPort": "Y"
+    },
+    {
+      "outputNode": "ae648123-8ad8-4b67-a390-84d92f7b62cd",
+      "inputNode": "26d14e35-6cd8-4f02-871a-72a0f06b72b5",
+      "outputPort": "Result",
+      "inputPort": "Z"
+    },
+    {
+      "outputNode": "650a123a-1865-4245-90fc-a5597dd1111b",
+      "inputNode": "31ef2df0-2104-4b7a-8f2b-5c2293ab3e99",
+      "outputPort": "OutputValue",
+      "inputPort": "A"
+    },
+    {
+      "outputNode": "650a123a-1865-4245-90fc-a5597dd1111b",
+      "inputNode": "ab597028-ba8b-4034-a0ae-4112acb1484e",
+      "outputPort": "OutputValue",
+      "inputPort": "A"
+    },
+    {
+      "outputNode": "04119da3-12e1-4604-be91-cd5c6b5fbd33",
+      "inputNode": "650a123a-1865-4245-90fc-a5597dd1111b",
+      "outputPort": "Result",
+      "inputPort": "A"
+    },
+    {
+      "outputNode": "d4c17df5-a0f7-41d7-9aec-3adad4ec9f0e",
+      "inputNode": "04119da3-12e1-4604-be91-cd5c6b5fbd33",
+      "outputPort": "SmoothedFloat",
+      "inputPort": "A"
+    },
+    {
+      "outputNode": "6ee15654-3781-47d2-ab69-3b2712a4b007",
+      "inputNode": "335faa20-23d6-451c-a9d8-908a90019c62",
+      "outputPort": "RawMessage",
+      "inputPort": "A"
+    },
+    {
+      "outputNode": "335faa20-23d6-451c-a9d8-908a90019c62",
+      "inputNode": "36cb1684-6e18-4384-9557-19744aa70d32",
+      "outputPort": "Result",
+      "inputPort": "Condition"
+    },
+    {
+      "outputNode": "6ee15654-3781-47d2-ab69-3b2712a4b007",
+      "inputNode": "2deeb9ac-7d0b-46ab-8dbb-cdce0ae53265",
+      "outputPort": "RawMessage",
+      "inputPort": "A"
+    },
+    {
+      "outputNode": "2deeb9ac-7d0b-46ab-8dbb-cdce0ae53265",
+      "inputNode": "dcaf2d4b-acd2-4680-bf66-b197048a5bb7",
+      "outputPort": "Result",
+      "inputPort": "Condition"
+    },
+    {
+      "outputNode": "6ee15654-3781-47d2-ab69-3b2712a4b007",
+      "inputNode": "32432f06-4ceb-4c9e-b6e5-9790d195730f",
+      "outputPort": "RawMessage",
+      "inputPort": "A"
+    },
+    {
+      "outputNode": "32432f06-4ceb-4c9e-b6e5-9790d195730f",
+      "inputNode": "e623697f-2ae0-4b9c-8c73-e4509dd4d2e0",
+      "outputPort": "Result",
+      "inputPort": "Condition"
+    },
+    {
+      "outputNode": "6ee15654-3781-47d2-ab69-3b2712a4b007",
+      "inputNode": "fe0397f9-f96f-4aee-9e1f-ea4e1d8ee09b",
+      "outputPort": "RawMessage",
+      "inputPort": "A"
+    },
+    {
+      "outputNode": "fe0397f9-f96f-4aee-9e1f-ea4e1d8ee09b",
+      "inputNode": "269a5ebf-6011-4c33-b0c7-a48e69e4a98d",
+      "outputPort": "Result",
+      "inputPort": "Condition"
+    },
+    {
+      "outputNode": "6ee15654-3781-47d2-ab69-3b2712a4b007",
+      "inputNode": "bd818332-2b72-4f5e-8e87-1e96865b13ca",
+      "outputPort": "RawMessage",
+      "inputPort": "A"
+    },
+    {
+      "outputNode": "bd818332-2b72-4f5e-8e87-1e96865b13ca",
+      "inputNode": "e826c3c3-0ab2-419c-89c4-9d263f689793",
+      "outputPort": "Result",
+      "inputPort": "Condition"
+    },
+    {
+      "outputNode": "6ee15654-3781-47d2-ab69-3b2712a4b007",
+      "inputNode": "8e119099-d78d-42ec-bb8a-24fcdbea46ae",
+      "outputPort": "RawMessage",
+      "inputPort": "A"
+    },
+    {
+      "outputNode": "8e119099-d78d-42ec-bb8a-24fcdbea46ae",
+      "inputNode": "1e841098-f9a7-4af3-89ed-f288d3281546",
+      "outputPort": "Result",
+      "inputPort": "Condition"
+    },
+    {
+      "outputNode": "6ee15654-3781-47d2-ab69-3b2712a4b007",
+      "inputNode": "25f5b349-237d-4112-9128-b36e5e882d85",
+      "outputPort": "RawMessage",
+      "inputPort": "A"
+    },
+    {
+      "outputNode": "25f5b349-237d-4112-9128-b36e5e882d85",
+      "inputNode": "3d80cd4d-084c-4613-8685-92a293d7a4e0",
+      "outputPort": "Result",
+      "inputPort": "Condition"
+    }
+  ],
+  "flowConnections": [
+    {
+      "outputNode": "717ad1cc-6e42-4c6c-9a23-27a3ee837fd7",
+      "inputNode": "6bdb4923-554d-447e-8595-6f3606472e9d",
+      "outputPort": "IfTrue",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "717ad1cc-6e42-4c6c-9a23-27a3ee837fd7",
+      "inputNode": "ca3d9307-7109-44e4-b313-02df245ef957",
+      "outputPort": "IfFalse",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "ca3d9307-7109-44e4-b313-02df245ef957",
+      "inputNode": "dbf69a9e-6a21-44ea-89c3-601f7b1cdf73",
+      "outputPort": "IfTrue",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "ca3d9307-7109-44e4-b313-02df245ef957",
+      "inputNode": "ec5f8c39-7eb7-4eb0-9486-dd828a5c8806",
+      "outputPort": "IfFalse",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "ec5f8c39-7eb7-4eb0-9486-dd828a5c8806",
+      "inputNode": "0c0aa6d4-4257-4a6e-9903-e47106ea86cf",
+      "outputPort": "IfTrue",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "ec5f8c39-7eb7-4eb0-9486-dd828a5c8806",
+      "inputNode": "de8d08a0-5464-4f41-9005-7912652ec279",
+      "outputPort": "IfFalse",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "de8d08a0-5464-4f41-9005-7912652ec279",
+      "inputNode": "e0222123-48bd-46ac-b673-4abf1d059fdf",
+      "outputPort": "IfTrue",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "de8d08a0-5464-4f41-9005-7912652ec279",
+      "inputNode": "ff9e5136-fd5f-4966-af34-30ef475ddb83",
+      "outputPort": "IfFalse",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "ff9e5136-fd5f-4966-af34-30ef475ddb83",
+      "inputNode": "ec9a50f6-312f-4d45-9773-5a1b972b2c5d",
+      "outputPort": "IfTrue",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "ff9e5136-fd5f-4966-af34-30ef475ddb83",
+      "inputNode": "7e977dc1-c0cd-4b13-ad5c-06c90cd45279",
+      "outputPort": "IfFalse",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "7e977dc1-c0cd-4b13-ad5c-06c90cd45279",
+      "inputNode": "868dd2fa-6384-47b0-a4b2-fe0144af9b27",
+      "outputPort": "IfTrue",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "7e977dc1-c0cd-4b13-ad5c-06c90cd45279",
+      "inputNode": "765c8850-7117-4938-b04c-374cde4210bb",
+      "outputPort": "IfFalse",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "765c8850-7117-4938-b04c-374cde4210bb",
+      "inputNode": "62544e90-b2b9-42cf-bc33-0354ada664a4",
+      "outputPort": "IfTrue",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "765c8850-7117-4938-b04c-374cde4210bb",
+      "inputNode": "57df2183-f186-46a6-bd8d-3c84383a6b94",
+      "outputPort": "IfFalse",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "57df2183-f186-46a6-bd8d-3c84383a6b94",
+      "inputNode": "9a5d31e9-eb58-450d-8f83-3d937d201216",
+      "outputPort": "IfTrue",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "57df2183-f186-46a6-bd8d-3c84383a6b94",
+      "inputNode": "65f4e59b-ce22-4501-81dd-cb6516d35cdc",
+      "outputPort": "IfFalse",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "65f4e59b-ce22-4501-81dd-cb6516d35cdc",
+      "inputNode": "bdf49d44-8dc5-4f2c-ba02-4cb3d1969c9b",
+      "outputPort": "IfTrue",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "6ee15654-3781-47d2-ab69-3b2712a4b007",
+      "inputNode": "717ad1cc-6e42-4c6c-9a23-27a3ee837fd7",
+      "outputPort": "Exit",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "e7b12eae-368b-4647-89df-c5e7c3eaa418",
+      "inputNode": "07dbe4b7-d139-455d-a856-34c77fd2fe77",
+      "outputPort": "Exit",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "769763b4-fc8d-4e33-986f-3858cd3d54f7",
+      "inputNode": "56b25323-73ae-49b1-a017-a9e6d25e2049",
+      "outputPort": "Exit",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "69cbde4f-cef1-4177-9e55-c7366ac444ec",
+      "inputNode": "42fef955-858a-4f86-a5bb-777f1032655a",
+      "outputPort": "Exit",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "36cb1684-6e18-4384-9557-19744aa70d32",
+      "inputNode": "dcabc585-a2d8-41c6-83b7-6db6f0ef712f",
+      "outputPort": "IfTrue",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "65f4e59b-ce22-4501-81dd-cb6516d35cdc",
+      "inputNode": "36cb1684-6e18-4384-9557-19744aa70d32",
+      "outputPort": "IfFalse",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "dcaf2d4b-acd2-4680-bf66-b197048a5bb7",
+      "inputNode": "857fdbc7-9b1d-421d-847b-988a679001a7",
+      "outputPort": "IfTrue",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "36cb1684-6e18-4384-9557-19744aa70d32",
+      "inputNode": "dcaf2d4b-acd2-4680-bf66-b197048a5bb7",
+      "outputPort": "IfFalse",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "e623697f-2ae0-4b9c-8c73-e4509dd4d2e0",
+      "inputNode": "47f325c6-fa79-45b9-942e-5641691c08dd",
+      "outputPort": "IfTrue",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "dcaf2d4b-acd2-4680-bf66-b197048a5bb7",
+      "inputNode": "e623697f-2ae0-4b9c-8c73-e4509dd4d2e0",
+      "outputPort": "IfFalse",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "269a5ebf-6011-4c33-b0c7-a48e69e4a98d",
+      "inputNode": "6d97b668-b809-41c1-89ef-6c0047cbf41c",
+      "outputPort": "IfTrue",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "e623697f-2ae0-4b9c-8c73-e4509dd4d2e0",
+      "inputNode": "269a5ebf-6011-4c33-b0c7-a48e69e4a98d",
+      "outputPort": "IfFalse",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "e826c3c3-0ab2-419c-89c4-9d263f689793",
+      "inputNode": "0ff0ed68-b609-4bd5-a998-0e430bc6d800",
+      "outputPort": "IfTrue",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "269a5ebf-6011-4c33-b0c7-a48e69e4a98d",
+      "inputNode": "e826c3c3-0ab2-419c-89c4-9d263f689793",
+      "outputPort": "IfFalse",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "1e841098-f9a7-4af3-89ed-f288d3281546",
+      "inputNode": "bbbec3de-df01-4ad0-b05c-a4e3a51c5094",
+      "outputPort": "IfTrue",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "e826c3c3-0ab2-419c-89c4-9d263f689793",
+      "inputNode": "1e841098-f9a7-4af3-89ed-f288d3281546",
+      "outputPort": "IfFalse",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "3d80cd4d-084c-4613-8685-92a293d7a4e0",
+      "inputNode": "cfe8b02a-f02d-4df2-a1c3-cbd416d80b6b",
+      "outputPort": "IfTrue",
+      "inputPort": "Enter"
+    },
+    {
+      "outputNode": "1e841098-f9a7-4af3-89ed-f288d3281546",
+      "inputNode": "3d80cd4d-084c-4613-8685-92a293d7a4e0",
+      "outputPort": "IfFalse",
+      "inputPort": "Enter"
+    }
+  ],
+  "properties": {
+    "id": "27f97f62-58f5-445f-b27d-3dcc3dcc5be8",
+    "dataInputs": {
+      "Variables": {
+        "type": "Warudo.Core.Graphs.GraphVariable[]",
+        "value": "[{\"id\":\"7a31b3c3-019d-440b-b876-f0bec9ce08b8\",\"dataInputs\":{\"Name\":{\"type\":\"string\",\"value\":\"\\\"NewVariable\\\"\"},\"DuplicateNameWarning\":{\"type\":\"string\",\"value\":\"\\\"**A variable with this name already exists.**\\\"\"},\"VariableType\":{\"type\":\"Warudo.Core.Graphs.GraphVariableType\",\"value\":\"{\\\"label\\\":\\\"Boolean\\\",\\\"value\\\":0,\\\"description\\\":null,\\\"icon\\\":null}\"},\"BooleanValue\":{\"type\":\"bool\",\"value\":\"false\"},\"IntegerValue\":{\"type\":\"int\",\"value\":\"0\"},\"FloatValue\":{\"type\":\"float\",\"value\":\"0.0\"},\"StringValue\":{\"type\":\"string\",\"value\":null},\"Vector3Value\":{\"type\":\"UnityEngine.Vector3\",\"value\":\"{\\\"x\\\":0.0,\\\"y\\\":0.0,\\\"z\\\":0.0}\"},\"BooleanListValue\":{\"type\":\"bool[]\",\"value\":\"[]\"},\"IntegerListValue\":{\"type\":\"int[]\",\"value\":\"[]\"},\"FloatListValue\":{\"type\":\"float[]\",\"value\":\"[]\"},\"StringListValue\":{\"type\":\"string[]\",\"value\":\"[]\"},\"Vector3ListValue\":{\"type\":\"UnityEngine.Vector3[]\",\"value\":\"[]\"}}}]"
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "skikai-minecraft-bot",
+  "version": "1.0.0",
+  "description": "Mineflayer bot for Skikai to play Minecraft autonomously",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "minecraft-protocol": "^1.64.0",
+    "mineflayer": "^4.35.0",
+    "mineflayer-armor-manager": "^2.0.1",
+    "mineflayer-auto-eat": "^5.0.3",
+    "mineflayer-blockfinder": "^0.0.7",
+    "mineflayer-collectblock": "^1.6.0",
+    "mineflayer-pathfinder": "^2.4.5",
+    "mineflayer-pvp": "^1.3.2",
+    "mineflayer-tool": "^1.2.0",
+    "vec3": "^0.1.10"
+  }
+}
